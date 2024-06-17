@@ -1,0 +1,84 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-bg {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header img {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* Chỉnh kích thước logo */
+}
+
+.form-header h2 {
+    margin-top: 20px;
+    font-size: 24px; /* Chỉnh kích thước chữ "LOGIN" */
+    color: var(--primary-color); /* Sử dụng màu sắc từ style.css */
+}
+
+.form-group .field {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .field span {
+    margin-right: 10px;
+}
+
+.form-group .form-control {
+    flex: 1;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--primary-color); /* Sử dụng màu sắc từ style.css */
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-dark); /* Sử dụng màu sắc từ style.css */
+}
+
+.social-network {
+    list-style: none;
+    padding: 0;
+}
+
+.social-network li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-network img {
+    width: 40px; /* Chỉnh kích thước logo Facebook và Google */
+    height: 40px;
+}
+
+.title {
+    font-weight: normal; /* Làm cho chữ "Login with" không in đậm */
+    font-size: 18px;
+}
+
+.bottom {
+    margin-top: 10px;
+}
+
+.bottom span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.bottom a {
+    color: var(--primary-color); /* Sử dụng màu sắc từ style.css */
+}
