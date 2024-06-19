@@ -41,9 +41,11 @@
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background-color: var(--primary-color); /* Sử dụng màu sắc từ style.css */
+    background-color: #306578;
+    ; /* Sử dụng màu sắc từ style.css */
     border: none;
     color: #fff;
+    cursor: pointer; /* Thêm con trỏ để hiển thị khi di chuột qua nút */
 }
 
 .btn-primary:hover {
@@ -61,8 +63,9 @@
 }
 
 .social-network img {
-    width: 40px; /* Chỉnh kích thước logo Facebook và Google */
-    height: 40px;
+    width: 30px; /* Chỉnh kích thước logo Facebook và Google */
+    height: 30px;
+    padding: 5px; /* Thêm khoảng cách xung quanh biểu tượng nếu cần */
 }
 
 .title {
