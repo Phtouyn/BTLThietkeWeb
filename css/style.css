@@ -148,6 +148,13 @@
 
 
 /*** Header ***/
+h2, h7 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+
 .carousel-caption {
     top: 0;
     left: 0;
@@ -275,7 +282,9 @@
 }
 .product-item img {
     height: 500px; 
+    width: 100%;
     object-fit: cover; 
+    object-position: center;
   }
 .product-item img {
     transition: .5s;
