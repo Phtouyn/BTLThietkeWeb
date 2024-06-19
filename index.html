@@ -970,6 +970,22 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+     <!-- Script kiểm tra trạng thái đăng nhập -->
+    <script>
+        document.getElementById('accountButton').addEventListener('click', function() {
+            // Kiểm tra trạng thái đăng nhập
+            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (isLoggedIn) {
+                // Nếu đã đăng nhập, chuyển hướng tới trang thông tin tài khoản
+                window.location.href = 'account-info.html';
+            } else {
+                // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
