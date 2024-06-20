@@ -8,17 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Account Information</h1>
+        <h1 class="mt-5 mb-4">Account Information</h1>
+        <div id="userInfo" class="mb-4">
+            <!-- Thông tin người dùng sẽ được hiển thị tại đây -->
+        </div>
         <button id="logoutButton" class="btn btn-secondary">Logout</button>
     </div>
 
-    <script>
-        document.getElementById('logoutButton').addEventListener('click', function() {
-            // Xóa trạng thái đăng nhập
-            localStorage.setItem('isLoggedIn', 'false');
-            // Chuyển hướng tới trang chủ hoặc trang đăng nhập
-            window.location.href = 'index.html';
-        });
-    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="js/account-info.js"></script>
 </body>
 </html>
