@@ -29,6 +29,51 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .section {
+            padding: 50px 0;
+        }
+        .sec-halfs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .half-content {
+            flex: 1;
+            display: flex;
+            margin: 10px;
+        }
+        .half-content .img-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .half-content .img-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .half-content .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .half-content.d-lg-flex {
+            align-items: stretch;
+        }
+        .heading {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .half-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -102,29 +147,59 @@
     </div>
     <!-- Page Header End -->
 
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
+    <!-- Content Start -->
+    <div class="section sec-halfs py-0">
         <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/about.jpg">
-                    </div>
+            <div class="half-content d-lg-flex align-items-stretch">
+                <div class="img-container">
+                    <img src="img/about1.png" alt="About Us Image">
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 mb-4">Best Organic Fruits And Vegetables</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a>
+                <div class="text">
+                    <h2 class="heading mb-3">Who Are We?</h2>
+                    <p class="mb-4">At ClayCraft, we are not just ceramic artisans; we are creators of unique ceramic artworks that embody artistic essence and meticulous craftsmanship. With a mission to make a difference, we offer ceramic products that are not only functional but also enhance the beauty of living spaces.</p>
+                </div>
+            </div>
+            <div class="half-content d-lg-flex align-items-stretch">
+                <div class="img-container order-md-2">
+                    <img src="img/about2.png" alt="Our Mission Image">
+                </div>
+                <div class="text">
+                    <h2 class="heading mb-3">Our Mission</h2>
+                    <p class="mb-4">ClayCraft is more than just a ceramic pottery brand. We aspire to enrich lives and bring happiness to those who appreciate artistry and value handmade craftsmanship. We take pride in offering you ceramic products that are artistic and distinctly unique. Each design is carefully selected and crafted by talented artisans, promising you perfect choices to refresh your living space and enhance your interior decor.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Content End -->
 
+
+    <!-- Đội ngũ nhân viên Start -->
+    <div class="container-fluid bg-light bg-icon py-6">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-5 mb-3">Our Staffs </h1>
+                <p>Proffesional - Enthusiast - Dedicate </p>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 mb-4 text-center aos-init aos-animate">
+              <img src="img/person1.jpg" alt="Image" class="img-fluid w-50 rounded-circle mb-3">
+              <h5 class="text-black">Hương Phan </h5>
+              <p>"At ClayCraft, we're a close-knit community passionate about pottery and dedicated to crafting unique pieces that resonate with our customers' tastes and preferences. Each day, we bring creativity and precision to our work, ensuring every piece tells a story of artistry and dedication."</p>
+            </div>
+            <div class="col-lg-4 mb-4 text-center aos-init aos-animate">
+              <img src="img/person2.jpg" alt="Image" class="img-fluid w-50 rounded-circle mb-3">
+              <h5 class="text-black">To Uyen </h5>
+              <p>"Here at ClayCraft, our team is driven by a shared love for ceramics and a commitment to excellence. We take pride in creating pottery that not only enhances living spaces but also inspires joy and appreciation for handmade craftsmanship."</p>
+            </div>
+            <div class="col-lg-4 mb-4 text-center aos-init aos-animate">
+              <img src="img/person3.jpg" alt="Image" class="img-fluid w-50 rounded-circle mb-3">
+              <h5 class="text-black">Tu Quyen </h5>
+              <p>"Working at ClayCraft means being part of a team that values creativity, craftsmanship, and customer satisfaction above all else. Each of us brings a unique perspective and skill set to our work, contributing to the vibrant culture of innovation and quality that defines our studio."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Đội ngũ nhân viên End -->
 
     <!-- Firm Visit Start -->
     <div class="container-fluid bg-primary bg-icon mt-5 py-6">
@@ -142,37 +217,33 @@
     </div>
     <!-- Firm Visit End -->
 
-
     <!-- Feature Start -->
     <div class="container-fluid bg-light bg-icon py-6">
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-5 mb-3">Our Features</h1>
-                <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                <p>Our commitment to craftsmanship and innovation shines through in every piece.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                        <h4 class="mb-3">Natural Process</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                        <h4 class="mb-3">Handcrafted Excellence</h4>
+                        <p class="mb-4">Delve into ClayCraft's collection of meticulously handcrafted pottery, each piece crafted with precision and care to ensure unparalleled quality and uniqueness.</p>                     
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                        <h4 class="mb-3">Organic Products</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                        <h4 class="mb-3">Artistic Design</h4>
+                        <p class="mb-4">Experience pottery at its finest with ClayCraft's blend of artistic flair and practical design, offering a range of items that enhance both aesthetics and functionality.</p>               
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Biologically Safe</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                        <h4 class="mb-3">Environmental Commitment</h4>
+                        <p class="mb-4">Embrace sustainability with ClayCraft's use of eco-friendly materials and practices, reflecting our dedication to minimizing environmental impact while producing high-quality pottery.</p>   
                     </div>
                 </div>
             </div>
