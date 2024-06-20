@@ -39,7 +39,7 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
+     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
@@ -55,16 +55,15 @@
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
                 <h1 class="fw-bold text-primary m-0">
                     <span style="font-size: 50px;">C</span><span class="text-secondary" style="font-size: smaller;">lay</span><span style="font-size: 40px;">C</span><span class="text-secondary" style="font-size: smaller;">raft</span>
-                  </h1>            </a>
+                  </h1>            
+            </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                
-                    <a href="product.html" class = "nav-item nav-link active"> Product </a>
-                    
+                    <a href="product.html" class="nav-item nav-link active">Product</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <a href="blog.html" class="nav-item nav-link">Blog</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
@@ -73,7 +72,7 @@
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                         <small class="fa fa-search text-body"></small>
                     </a>
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" id="accountButton">
                         <small class="fa fa-user text-body"></small>
                     </a>
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
@@ -971,6 +970,22 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+     <!-- Script kiểm tra trạng thái đăng nhập -->
+    <script>
+        document.getElementById('accountButton').addEventListener('click', function() {
+            // Kiểm tra trạng thái đăng nhập
+            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (isLoggedIn) {
+                // Nếu đã đăng nhập, chuyển hướng tới trang thông tin tài khoản
+                window.location.href = 'account-info.html';
+            } else {
+                // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
