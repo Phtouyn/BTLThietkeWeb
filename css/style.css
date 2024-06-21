@@ -83,6 +83,12 @@
     font-weight: normal;
 }
 
+/*** Header ***/
+h2, h7 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
 
 /*** Navbar ***/
 .fixed-top {
