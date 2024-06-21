@@ -17,6 +17,12 @@
     margin: 0 auto;
     width: 200px; /* Chỉnh kích thước logo */
 }
+/*** Header ***/
+h2, h7 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
 
 .form-header h2 {
     margin-top: 20px;
