@@ -164,25 +164,6 @@
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
-                                    <script>
-                                        document.addEventListener('DOMContentLoaded', function () {
-                                            var minusButton = document.querySelector('.btn-minus');
-                                            var plusButton = document.querySelector('.btn-plus');
-                                            var quantityInput = document.querySelector('.quantity input[type="text"]');
-                                        
-                                            minusButton.addEventListener('click', function () {
-                                                var currentValue = parseInt(quantityInput.value, 10);
-                                                if (currentValue > 1) {
-                                                    quantityInput.value = currentValue - 1;
-                                                }
-                                            });
-                                        
-                                            plusButton.addEventListener('click', function () {
-                                                var currentValue = parseInt(quantityInput.value, 10);
-                                                quantityInput.value = currentValue + 1;
-                                            });
-                                        });
-                                        </script>
                                 </div>
 
                                 <div class="col-lg-12 text-start text-lg-start wow slideInRight" data-wow-delay="0.1s">
