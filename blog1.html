@@ -58,6 +58,68 @@
     .btn-primary {
       border-radius: 10px;
     }
+
+    .post-entry-sidebar ul li a img, .post-entry-footer ul li a img {
+    width: 90px;
+    }
+
+    .sidebar-box *:last-child {
+    margin-bottom: 0;
+    }
+    .post-entry-sidebar ul li a, .post-entry-footer ul li a {
+    display: table;
+    color: #116e4a;
+}
+a {
+    color: #116e4a;
+    text-decoration: none;
+    font-size: 16px ;
+    text-align: justify;
+    margin: 0px 0px 8px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.read-more {
+    border-bottom: 2px solid #214252;
+    font-size: 16px;
+}
+.post-entry-sidebar ul li a .text h4, .post-entry-sidebar ul li a .text .h4, .post-entry-footer ul li a .text h4, .post-entry-footer ul li a .text .h4 {
+    font-size: 16px;
+}
+.sidebar-box .heading {
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.post-entry-sidebar ul li a img, .post-entry-sidebar ul li a .text, .post-entry-footer ul li a img, .post-entry-footer ul li a .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+.post-entry-sidebar ul li a, .post-entry-footer ul li a {
+    display: table;
+    color: #116e4a;
+}
+.rounded {
+    border-radius: 10px !important
+}
+.post-entry-sidebar ul li, .post-entry-footer ul li {
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+}
+
+.text-center {
+    text-align: center !important;
+}
+.section{
+  padding: 64px ;
+}
+
     
     </style>
 </head>
@@ -87,9 +149,23 @@
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-search text-body"></small>
-                    </a>
+                  <button id="searchBtn" class="btn-sm-square bg-white rounded-circle ms-3" >
+                    <small class="fa fa-search text-body"></small>
+                </button>
+                <form id="searchForm" action="search-results-page.html" method="get" style="display: none;">
+                    <input type="text" name="search" placeholder="Search products..." required>
+                    <button type="submit">Search</button>
+                </form>
+                <script>
+                    document.getElementById('searchBtn').addEventListener('click', function() {
+                      var searchForm = document.getElementById('searchForm');
+                      if (searchForm.style.display === 'none') {
+                        searchForm.style.display = 'block';
+                      } else {
+                        searchForm.style.display = 'none';
+                      }
+                    });
+                  </script>
                     <a href = "signup.html" class="btn-sm-square bg-white rounded-circle ms-3" id="accountButton">
                         <small class="fa fa-user text-body"></small>
                     </a>
@@ -105,7 +181,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">404 Error</h1>
+            <h1 class="display-3 mb-3 animated slideInDown"></h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
@@ -123,9 +199,6 @@
       <div class="col-md-6">
         <div class="post-entry text-center">
           <h1 class="mb-4">How to Choose the Perfect Ceramic Piece for Your Home</h1>
-          <div class="post-meta align-items-center text-center">
-            <span class="d-inline-block mt-1">By Thu Huong</span>
-            <span>&nbsp;-&nbsp; June 10, 2024</span>
           </div>
         </div>
       </div>
@@ -142,22 +215,22 @@
             <p>Choosing the right ceramic piece for your home involves considering both aesthetic appeal and practicality. Whether you're looking for a statement vase, functional dinnerware, or decorative accents, here are some tips to help you find the perfect ceramic piece:</p>
             <p>Firstly, assess your home decor style. Are you drawn to minimalist interiors, rustic charm, or contemporary designs? The ceramic piece you choose should complement and enhance your existing decor. For example, sleek and modern ceramics may suit a minimalist setting, while textured and earthy pottery might complement a farmhouse or bohemian aesthetic.</p>
             <p>The color and pattern of ceramic pieces can significantly impact the ambiance of a room. Choose colors that harmonize with your decor palette or opt for contrasting hues to make a statement. Patterns like geometric shapes, floral motifs, or abstract designs can add visual interest and personality to your space.</p>
-            <div class="row my-4">
-            <div class="col-md-12 mb-4">
-              <img src="assets/imgs/single1.png" alt="Image placeholder" class="img-fluid rounded">
+            <div div class="row my-4">
+              <div class="col-md-12 mb-4">
+                <img src="img/blog4.jpg" alt="Image placeholder" class="img-fluid rounded">
+              </div>
+              <div class="col-md-6 mb-4">
+                <img src="img/blog10.webp" alt="Image placeholder" class="img-fluid rounded">
+              </div>
+              <div class="col-md-6 mb-4">
+                <img src="img/blog11.webp" alt="Image placeholder" class="img-fluid rounded">
+              </div>
             </div>
-            <div class="col-md-6 mb-4">
-              <img src="assets/imgs/single2.png" alt="Image placeholder" class="img-fluid rounded">
-            </div>
-            <div class="col-md-6 mb-4">
-              <img src="assets/imgs/single3.png" alt="Image placeholder" class="img-fluid rounded">
-            </div>
+              <p>Think about how you intend to use the ceramic piece. Is it primarily decorative, or will it serve a functional purpose? Dinnerware should be durable and microwave-safe, while vases and decorative bowls can prioritize aesthetic appeal. Understanding the intended use will help you narrow down your options.</p>
+              <p>Consider the size and proportion of the ceramic piece in relation to its intended placement. A large statement vase can anchor a room and draw attention, while smaller pieces like ceramic figurines or coasters can add subtle touches of style to shelves or side tables. Ensure that the size of the ceramic piece complements its surroundings without overwhelming the space.</p>
+              <p>Ceramic pieces come in a variety of techniques, each offering unique textures and finishes. Explore options such as hand-thrown pottery, slip-cast ceramics, or hand-painted designs. Handcrafted ceramics often showcase artisanal skills and individuality, adding character and authenticity to your home.</p>
+              <p>Choosing the perfect ceramic piece for your home involves thoughtful consideration of style, functionality, size, technique, color, and sustainability. Whether you're decorating a living room, dining area, or bedroom, ceramic pieces can elevate your space with their beauty and craftsmanship. Explore our curated collection of ceramics at ClayCraft and find the piece that speaks to your personal style and enhances your living environment.</p>
           </div>
-          <p>Think about how you intend to use the ceramic piece. Is it primarily decorative, or will it serve a functional purpose? Dinnerware should be durable and microwave-safe, while vases and decorative bowls can prioritize aesthetic appeal. Understanding the intended use will help you narrow down your options.</p>
-          <p>Consider the size and proportion of the ceramic piece in relation to its intended placement. A large statement vase can anchor a room and draw attention, while smaller pieces like ceramic figurines or coasters can add subtle touches of style to shelves or side tables. Ensure that the size of the ceramic piece complements its surroundings without overwhelming the space.</p>
-          <p>Cảnh quan cây cảnh không chỉ giúp làm đẹp không gian mà còn mang lại lợi ích về tâm lý và sức khỏe. Sự sống động và tươi mới của cây xanh tạo nên không khí sống động và tích cực.</p>
-          <p>Nghệ thuật trang trí nội thất cùng với cây cảnh không chỉ là việc bài trí mà còn là sự tạo ra không gian sống xanh, gần gũi với thiên nhiên, giúp bạn tận hưởng cuộc sống ấm áp và an lành hơn. Hãy để cây cảnh làm nên nét độc đáo và phong cách cho ngôi nhà của bạn!</p>
-        </div>
   <!--End Blog Content -->
 
 
@@ -171,13 +244,11 @@
         </div>
         <div class="comment-body">
           <h3>Hoang Thi Tu Quyen </h3>
-          <div class="meta">Dec 10, 2023 at 2:21pm</div>
-          <p>Wow, tôi thật sự bất ngờ với cách cây cỏ có thể làm cho không gian sống trở nên sinh động và thú vị đến như vậy. Bài viết cung cấp nhiều ý tưởng sáng tạo để kết hợp nội thất với cây cảnh. Sẽ thử ngay với những chiếc đèn LED nhỏ để tạo ra khu vườn mini trong nhà!</p>
+          <div class="meta">June 10, 2023 at 2:21pm</div>
+          <p>It's amazing how a well-chosen vase or bowl can completely transform a space. Thanks for the helpful guidance!</p>
           <p><a href="#" class="reply rounded" btn btn-primary rounded-pill py-3 px-5 mt-3>Reply</a></p>
         </div>
       </li>
-
-      
 
       <li class="comment">
         <div class="vcard">
@@ -185,8 +256,8 @@
         </div>
         <div class="comment-body">
           <h3>Tran Yen Vy</h3>
-          <div class="meta">Dec 10, 2023 at 2:21pm</div>
-          <p>Wow, tôi thật sự bất ngờ với cách cây cỏ có thể làm cho không gian sống trở nên sinh động và thú vị đến như vậy. Bài viết cung cấp nhiều ý tưởng sáng tạo để kết hợp nội thất với cây cảnh. Sẽ thử ngay với những chiếc đèn LED nhỏ để tạo ra khu vườn mini trong nhà!</p>
+          <div class="meta">June 10, 2024 at 2:21pm</div>
+          <p>"Thank you for this comprehensive guide to choosing ceramic pieces! The emphasis on eco-friendly and sustainable choices is so important. It's refreshing to see a focus on both aesthetics and environmental impact.</p>
           <p><a href="#" class="reply rounded">Reply</a></p>
         </div>
       </li>
@@ -197,8 +268,8 @@
         </div>
         <div class="comment-body">
           <h3>Pham Thi To Uyen</h3>
-          <div class="meta">Dec 10, 2023 at 5:30pm</div>
-          <p>Quả thực, việc kết hợp màu sắc của cây cảnh với nội thất là điều mà tôi chưa bao giờ nghĩ tới. Nhờ bài viết, tôi hiểu rõ hơn về cách chúng có thể làm nổi bật và làm phong phú thêm không gian sống. Thật sự là nguồn cảm hứng tuyệt vời!</p>
+          <div class="meta">May 10, 2024 at 5:30pm</div>
+          <p>As someone who loves collecting ceramics, I found this article incredibly informative! The section on exploring different ceramic techniques has inspired me to look for more handcrafted pieces.</p>
           <p><a href="#" class="reply rounded">Reply</a></p>
         </div>
       </li>
@@ -210,8 +281,8 @@
             </div>
             <div class="comment-body">
               <h3>Tran Yen Vy</h3>
-              <div class="meta">Dec 11, 2023 at 8:45pm</div>
-              <p>Hoàn toàn đồng ý với bạn! Cây cảnh thực sự làm cho không gian sống trở nên sống động và tinh tế hơn. Mỗi loại cây đều mang lại một vẻ đẹp và cảm nhận riêng biệt. Bạn có loại cây nào làm cho không gian của bạn trở nên đặc biệt hơn không? Chia sẻ thêm về trải nghiệm của bạn được không?</p>
+              <div class="meta">May 11, 2024 at 8:45pm</div>
+              <p>Understanding the impact of color and pattern on the overall decor was also eye-opening. Looking forward to seeing more posts like this!</p>
               <p><a href="#" class="reply rounded">Reply</a></p>
             </div>
           </li>
@@ -269,7 +340,7 @@
       <ul>
         <li>
           <a href="blog1.html">
-            <img src="assets/imgs/blog1.png" alt="Image placeholder" class="me-4 rounded">
+            <img src="img/about1.png" alt="Image placeholder" class="me-4 rounded">
             <div class="text">
               <h4>The Art of Pottery: A Journey from Clay to Craft</h4>
               <div class="post-meta">
@@ -280,7 +351,7 @@
         </li>
         <li>
           <a href="blog1.html">
-            <img src="assets/imgs/blog5.png" alt="Image placeholder" class="me-4 rounded">
+            <img src="img/blog2.jpg" alt="Image placeholder" class="me-4 rounded">
             <div class="text">
               <h4>How to Choose the Perfect Ceramic Piece for Your Home</h4>
               <div class="post-meta">
@@ -291,7 +362,7 @@
         </li>
         <li>
           <a href="blog1.html">
-            <img src="" alt="Image placeholder" class="me-4 rounded">
+            <img src="img/blog6.jpg" alt="Image placeholder" class="me-4 rounded">
             <div class="text">
               <h4>Seasonal Decor: Incorporating Pottery into Your Home</h4>
               <div class="post-meta">
@@ -316,8 +387,8 @@
 <div class="row">
 <div class="col-md-6 col-lg-3">
   <div class="blog-entry">
-    <a href="blog1.html" class="img-link">
-      <img src="assets/imgs/blog1.png" alt="Image" class="img-fluid">
+    <a href="blog" class="img-link">
+      <img src="img/blog5.jpg" alt="Image" class="img-fluid">
     </a>
     <span class="date">Dec. 11th, 2023</span>
     <h2><a href="blog1.html">Inspiration from Nature: Designing with Clay and Earth Tones</a></h2>
@@ -328,7 +399,7 @@
 <div class="col-md-6 col-lg-3">
   <div class="blog-entry">
     <a href="blog1.html" class="img-link">
-      <img src="assets/imgs/blog2.png" alt="Image" class="img-fluid">
+      <img src="img/blog7.webp" alt="Image" class="img-fluid">
     </a>
     <span class="date">Dec. 11th, 2023</span>
     <h2><a href="blog1.html">The Perfect Gift: Why Handmade Pottery is Always a Hit</a></h2>
@@ -343,17 +414,18 @@
     </a>
     <span class="date">Dec. 10th, 2023 </span>
     <h2><a href="blog1.html">Decorating Small Spaces: Using Pottery to Maximize Style</a></h2>
-    <p>Lấy cảm hứng từ các xu hướng trang trí nội thất tích hợp cây xanh để làm mới không gian sống.</p>
+    <p>Decorating a small space can be challenging, but with the right approach, you can create a stylish environment that maximizes every inch of space.</p>
     <p><a href="blog1.html" class="read-more">Read more </a></p>
   </div>
 </div>
 <div class="col-md-6 col-lg-3">
   <div class="blog-entry">
     <a href="blog1.html" class="img-link">
-      <img src="assets/imgs/blog4.png" alt="Image" class="img-fluid">
+      <img src="img/blog8.webp" alt="Image" class="img-fluid">
     </a>
     <span class="date">Dec. 8th, 2023</span>
-    <h2><a href="blog1.html">Decorating a small space can be challenging, but with the right approach, you can create a stylish and inviting environment that maximizes every inch of space.</p>
+    <h2><a href="blog1.html">How to Choose the Perfect Ceramic Piece for Your Home</p>
+    <p>Choosing the right ceramic piece for your home involves considering both aesthetic appeal and practicality. </p>
     <p><a href="blog1.html" class="read-more">Read more</a></p>
   </div>
 </div>
