@@ -406,4 +406,15 @@
     margin-top: auto; /* Ensure it has space at the top */
 }
 
+/*Điều chỉnh kích thước ảnh và bài viết của trang blog*/
+.blog-image {
+    height: 400px; /* hoặc chiều cao bạn mong muốn */
+    width: 100%;
+    object-fit: cover;
+}
+.blog-post {
+    min-height: 200px; /* điều chỉnh chiều cao phù hợp */
+}
+
+
 
