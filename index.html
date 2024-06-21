@@ -78,6 +78,20 @@
                     <a href = "signup.html" class="btn-sm-square bg-white rounded-circle ms-3" id="accountButton">
                         <small class="fa fa-user text-body"></small>
                     </a>
+                      <!-- Script kiểm tra trạng thái đăng nhập -->
+    <script>
+        document.getElementById('accountButton').addEventListener('click', function() {
+            // Kiểm tra trạng thái đăng nhập
+            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (isLoggedIn) {
+                // Nếu đã đăng nhập, chuyển hướng tới trang thông tin tài khoản
+                window.location.href = 'account-info.html';
+            } else {
+                // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="giohang.html">
                         <small class="fa fa-shopping-bag text-body"></small>
                     </a>
@@ -971,20 +985,7 @@
     <script src="js/main.js"></script>
 
     
-    <!-- Script kiểm tra trạng thái đăng nhập -->
-    <script>
-        document.getElementById('accountButton').addEventListener('click', function() {
-            // Kiểm tra trạng thái đăng nhập
-            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-            if (isLoggedIn) {
-                // Nếu đã đăng nhập, chuyển hướng tới trang thông tin tài khoản
-                window.location.href = 'account-info.html';
-            } else {
-                // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
-                window.location.href = 'login.html';
-            }
-        });
-    </script>
+   
     
 </body>
 
