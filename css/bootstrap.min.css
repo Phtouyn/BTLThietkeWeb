@@ -5118,7 +5118,7 @@ textarea.form-control-lg {
 
 @media (min-width: 1200px) {
     .list-group-horizontal-xl {
-        flex-direction:row
+    flex-direction:row;
     }
 
     .list-group-horizontal-xl>.list-group-item:first-child {
