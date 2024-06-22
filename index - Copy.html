@@ -116,15 +116,14 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.7.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-1.5.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7">
                                     <h1 class="display-2 mb-5 animated slideInDown">Exclusive Ceramics and Pottery Retailers </h1>
-                                    <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Product</a>
-                                    <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Shop Now</a>
-                                
+                                    <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Shop our Collection</a>
+                                    <a href="#tab-2" id="hot-summer-sale-button" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Hot Summer Sale</a>
                                 </div>
                             </div>
                         </div>
@@ -136,31 +135,40 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7">
-                                     <!-- 
+                                    <!-- 
                                     <h1 class="display-2 mb-5 animated slideInDown">Transform Your Space with Timeless Ceramics</h1>
                                     <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
                                     <a href="" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
                                      -->
-                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
     <!-- Carousel End -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hot-summer-sale-button').addEventListener('click', function(event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                // Kích hoạt tab "Hot Summer Sale"
+                var myTab = new bootstrap.Tab(document.querySelector('a[href="#tab-2"]'));
+                myTab.show();
+                // Cuộn mượt đến phần tử có id là "tab-2"
+                document.getElementById('#tab-2').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
  
     
 
@@ -262,121 +270,15 @@
                 </div>
             </div>
             <div class="tab-content">
-                <!--New Arrivals-->
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-4">
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Bloating_Vase.html"><img class = "img-fluid" src="img/product-12.jpg" alt="" ></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Bloating_Vase.html">Black Cup</a>
-                                    <span class="text-primary me-1">$28.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Bloating_Vase.html"><i class="fa fa-eye text-primary me-2" ></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Basic_White_Vase.html"><img class="img-fluid" src="img/product-2.jpg" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Basic_White_Vase.html">Basic White Vase</a>
-                                    <span class="text-primary me-1">$39.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Basic_White_Vase.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Weird_White_Vase.html"><img class="img-fluid" src="img/product-4.jpg" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Grayish_Vase.html">Weird White Vase</a>
-                                    <span class="text-primary me-1">$25.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Weird_White_Vase.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/blog11.webp" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$30.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Basic_White_Vase.html"><img class="img-fluid" src="img/product-8.jpg" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Basic_White_Vase.html">Basic White Vase</a>
-                                    <span class="text-primary me-1">$32.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Basic_White_Vase.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-12 text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="product.html">Browse More Products</a>
-                        </div>                     
-                    </div>
+                <div id="tab-1" class="tab-pane fade show active p-0">
+                    <!-- Nội dung cho tab "New Arrivals" -->
                 </div>
-                <!--Hot Summer Sale -->
-                <div id="tab-2" class="tab-pane fade show p-0">
+                <div id="tab-2" class="tab-pane fade p-0">
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Plain_White_Plate.html"><img class="img-fluid" src="img/product-6.jpg" alt=""></a>
+                                    <a href="Plain_White_Plate.html"><img class="img-fluid" src="img/product-6.jpg" alt=""></a>
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
                                 </div>
                                 <div class="text-center p-4">
@@ -394,204 +296,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/product-1.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/product-4.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/product-9.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-secondary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/product-17.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/product-13.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$15.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/product-20.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/blog8.webp" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/blog7.webp" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$19.00</span>
-                                    <span class="text-body text-decoration-line-through">$29.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href = "Other_White_Plate.html"><img class="img-fluid" src="img/blog13.jpg" alt=""></a>
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Sale</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="Other_White_Plate.html">Other White Plate</a>
-                                    <span class="text-primary me-1">$26.00</span>
-                                    <span class="text-body text-decoration-line-through">$49.00</span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="Other_White_Plate.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" onclick="addToCart()"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="product.html">Browse More Products</a>
-                        </div>
+                        <!-- Thêm các sản phẩm khác ở đây -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-            
+    <!-- Product End -->
        
     <!-- Product End -->
 
